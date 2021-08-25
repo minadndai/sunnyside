@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title-font: 'Fraunces', serif;
+    --text-font: 'Barlow', serif;
+    --graphic-design-color: hsl(167, 40%, 24%);
+    --footer-color: hsl(168, 34%, 41%);
+    --photography-color: hsl(198, 62%, 26%);
+    --title-color: hsl(212, 27%, 19%);
+    --text-color: hsl(213, 9%, 39%);
+    --paragraph-color: hsl(232, 10%, 55%);
+    --testimonial-color:hsl(210, 4%, 67%);
+    --heading-color: hsl(0, 0%, 100%);
+    --button-color: hsl(51, 100%, 49%);
+    --line-color: hsl(7, 99%, 70%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-X: hidden;
+    font-family: var(--text-font);
+    font-size: 18px;
+}
+
+section {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: 10vmin;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    transform: translateY(-10vh);
+}
+
+h2, h3 {
+    font-family: var(--title-font);
+    color: var(--title-color);
+}
+
+p {
+    font-family: var(--text-font);
+    color: var(--paragraph-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+#middle img, #blue img {
+    width: 100%;
+    max-width: 100%;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-section {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.menuToggle {
+    cursor: pointer;
+}
+
+.menuToggleFade {
+    opacity: 0.5;
+}
+
+.navSections {
+    opacity: 0;
+}
+
+.navToggle {
+    list-style: none;
+    position: relative;
+    top: 1rem;
+    right: -2rem;
+    width: 87%;
+    height: 45vh;
+    background-color: var(--heading-color);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+}
+
+.navToggle::before {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background-color: var(--heading-color);
+    height: 2rem;
+    width: 2rem;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    transition: all .2s ease-in;
+}
+
+.nav-item {
+    padding: 1.5rem;
+}
+
+.navlink {
+    color: var(--paragraph-color);
+    font-size: 24px;
+}
+
+.button {
+    height: 4rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--button-color);
+    font-family: var(--title-font);
+    margin: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    z-index: 3;
+}
+
+.button a {
+    color: var(--title-color);
+    font-size: 18px;
+}
+
+
+#hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/mobile/image-header.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 27vh;
+}
+
+
+/* header section ends here */
+
+.textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textblock h2 {
+    width: 25rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.textblock p {
+    width: 25rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.textblock h3 {
+    text-transform: uppercase;
+}
+
+.textblock h2, h3, p {
+    padding: 1.5rem;
+}
+
+.textblock {
+    padding: 5rem;
+}
+
+.yellow::before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-color);
+    transform: translate(-0.5rem, 1rem);
+    height: 1rem;
+    width: 10.5rem;
+    border-radius: 1rem;
+    z-index: -1;
+    opacity: 30%;
+}
+
+.pink::before {
+    content: "";
+    position: absolute;
+    background-color: var(--line-color);
+    transform: translate(-0.5rem, 1rem);
+    height: 1rem;
+    width: 10.5rem;
+    border-radius: 1rem;
+    z-index: -1;
+    opacity: 30%;
+}
+
+/* About section(middle) ends here */
+
+.blueblocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.blueblocks h2 {
+    width: 25rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.graphic, .photography {
+    position: relative;
+} 
+
+.graphic h2, p {
+    color: var(--graphic-design-color);
+}
+
+.photography h2, p {
+    color: var(--photography-color);
+}  
+
+.graphic h2, .graphic p,
+.photography h2, .photography p {
+    transform: translateY(13rem);
+    padding: 1rem;
+    text-align: center;
+}
+
+.graphic p, .photography p {
+    line-height: 2rem;
+}
+
+.graphic {
+    background: url(../images/mobile/image-graphic-design.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.photography {
+    background: url(../images/mobile/image-photography.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Service section ends here */
+
+#testimonials {
+    padding: 3rem 0;
+}
+
+.testimonialstitle {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    color: var(--testimonial-color);
+    padding: 5rem 0;
+}
+
+.testimonialp {
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.position {
+    color: var(--testimonial-color);
+}
+
+.clientscontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.clients img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.position {
+    margin-top: -2rem;
+}
+
+/* testimonial section ends here */
+
+#fourblocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+#fourblocks img{
+    width: 50vw;
+    height: 13rem;
+    margin-bottom: -5px;
+}
+
+/* four blocks section ends here */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(160, 245, 228);
+    padding: 3rem;
+}
+
+.footerlogo {
+    color: var(--footer-color);
+    text-align: center;
+    transform: scale(1.5);
+    padding: 3rem 2rem 1.5rem 2rem;
+}
+
+.footerlinks {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.footerlink {
+    list-style: none;
+    font-size: 4vmin;
+}
+
+.footeritem {
+    color: var(--footer-color);
+    text-decoration: none;
+    padding: 2.5rem;
+}
+
+.socialicons {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+}
+
+.socialicon {
+    padding: 1rem;
+}
+
+
+
+/* media query */
+
+/* IPAD */
+@media (min-width: 768px) {
+
+    .navToggle {
+        width: 92vw;
+    }
+
+    #fourblocks img { 
+        width: 50vw;
+        height: 20rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1280px) {
+
+    /* Navbar section */
+    .navSections {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        list-style: none;
+        opacity: 1;
+    }
+
+    /* Added this section of code but the menu disappears
+    on desktop version once menuToggle is clicked 
+    on mobile version */
+    .menuToggle, .menuToggleFade, .navToggle, .navToggle::before {
+        display: none;
+        pointer-events: none;
+    }
+
+    .navlink {
+        color: var(--heading-color);
+    }
+
+    .button {
+        background: var(--heading-color);
+    }
+
+    /* Hero section */
+    #hero {
+      background: url(../images/desktop/image-header.jpg) center no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+        transform: translateY(-20vh);
+        font-size: 4rem;
+    }
+
+    .arrow {
+        transform: translateY(-15vh);
+    }
+
+    /* About section */
+    .topMiddle, .bottomMiddle {
+        display: flex;
+        margin-bottom: -5px;
+    }
+
+    .topMiddle {
+        flex-direction: row-reverse;
+    }
+
+    .textblock {
+        flex: 1 50%;
+        padding: 0;
+    }
+
+    .pictures {
+        flex: 50% 1;
+    }
+
+    .textblock h2, .textblock p {
+        text-align: left;
+        padding: 1rem 0;
+    }
+
+    .yellow, .pink{
+        width: 27rem;
+        text-align: left;
+    }
+
+    /* Service section */
+    #blue {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .graphic {
+        background: url(../images/desktop/image-graphic-design.jpg) center no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 50rem;
+    }
+    
+    .photography {
+        background: url(../images/desktop/image-photography.jpg) center no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 50rem;
+    }
+
+    .graphic p, .photography p {
+        width: 25rem;
+    }
+
+    /* Testimonial section */
+    .clientscontainer {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 2rem;
+    }
+
+    /* Contact section - 4 images */
+    #fourblocks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #fourblocks img {
+        height: 20rem;
+        width: 25vw;
+    }
+
+}
